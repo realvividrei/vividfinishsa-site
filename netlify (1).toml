@@ -1,0 +1,19 @@
+[build]
+  publish = "/"
+  command = ""
+
+[[plugins]]
+  package = "@netlify/plugin-local-install-core"
+
+[[redirects]]
+  from = "/admin"
+  to = "/admin/index.html"
+  status = 200
+
+[dev]
+  port = 8888
+  publish = "."
+
+[build.environment]
+  NETLIFY_IDENTITY_ENABLED = "true"
+  NETLIFY_GIT_GATEWAY_ENABLED = "true"
